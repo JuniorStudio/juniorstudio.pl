@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08080b">
+    <meta name="description" content="JuniorStudio — jednoosobowe studio graficzne. Miniaturki Minecraft, avatary, banery i grafiki dla twórców.">
+    <title>JuniorStudio — Grafika Minecraft, która przyciąga</title>
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="noise"></div>
+    <div class="cursor-glow"></div>
+
+    <header class="site-header" id="siteHeader">
+        <a href="#home" class="logo" aria-label="JuniorStudio — strona główna">
+            <span class="logo-mark">J</span>
+            <span>Junior<span class="logo-accent">Studio</span></span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Główna nawigacja">
+            <a href="#home" class="nav-link active">Start</a>
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+            <a href="#uslugi" class="nav-link">Usługi</a>
+            <a href="#cennik" class="nav-link">Cennik</a>
+            <a href="#o-mnie" class="nav-link">O mnie</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="https://www.behance.net/juniorstudio_pl" target="_blank" rel="noopener" class="header-social" aria-label="Behance">
+                <i class="fa-brands fa-behance"></i>
+            </a>
+            <a href="#kontakt" class="header-cta">Zamów grafikę <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Otwórz menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home">Start</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#uslugi">Usługi</a>
+        <a href="#cennik">Cennik</a>
+        <a href="#o-mnie">O mnie</a>
+        <a href="#wspolpraca">Współpraca</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontakt" class="mobile-cta">Zamów grafikę <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-grid"></div>
+            <div class="hero-orb hero-orb-one"></div>
+            <div class="hero-orb hero-orb-two"></div>
+
+            <div class="container hero-inner">
+                <div class="hero-copy reveal">
+                    <div class="eyebrow"><span class="status-dot"></span> JuniorStudio <span>•</span> grafika Minecraft & CS2</div>
+                    <h1>Twoja grafika.<br><span class="gradient-text">Więcej uwagi.</span></h1>
+                    <p class="hero-lead">Miniaturki Minecraft i CS2, avatary oraz oprawa graficzna tworzone z myślą o tym, żeby Twój content wyglądał lepiej i wyróżniał się od pierwszego spojrzenia.</p>
+
+                    <div class="hero-actions">
+                        <a href="#portfolio" class="btn btn-primary">Zobacz portfolio <i class="fa-solid fa-arrow-down"></i></a>
+                        <a href="#kontakt" class="btn btn-ghost">Napisz do mnie <i class="fa-regular fa-paper-plane"></i></a>
+                    </div>
+
+                    <div class="hero-trust">
+                        <div class="trust-item"><strong>30+</strong><span>realizacji<br>w portfolio</span></div>
+                        <div class="trust-line"></div>
+                        <div class="trust-item"><strong>100%</strong><span>indywidualnego<br>podejścia</span></div>
+                        <div class="trust-line"></div>
+                        <div class="trust-item"><strong>36h</strong><span>max. czasu<br>najdłuższej pracy</span></div>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal reveal-delay">
+                    <div class="visual-glow"></div>
+                    <div class="visual-card visual-back">
+                        <img src="welna.png" alt="Projekt Minecraft Bedwars" loading="lazy">
+                    </div>
+                    <div class="visual-card visual-main">
+                        <img src="manhunt.png" alt="Miniaturka Minecraft Manhunt" fetchpriority="high">
+                        <div class="visual-overlay">
+                            <span><i class="fa-solid fa-wand-magic-sparkles"></i> JuniorStudio</span>
+                            <b>Thumbnail design</b>
+                        </div>
+                    </div>
+                    <div class="floating-chip chip-top"><i class="fa-solid fa-star"></i><span>Pixel-perfect</span></div>
+                    <div class="floating-chip chip-bottom"><i class="fa-solid fa-cube"></i><span>Minecraft 3D</span></div>
+                </div>
+            </div>
+
+            <a href="#portfolio" class="scroll-hint"><span>scroll</span><i class="fa-solid fa-arrow-down"></i></a>
+        </section>
+
+        <section class="marquee-section" aria-label="Specjalizacje">
+            <div class="marquee-track">
+                <span>MINIATURKI MINECRAFT & CS2</span><i class="fa-solid fa-diamond"></i>
+                <span>AVATARY</span><i class="fa-solid fa-diamond"></i>
+                <span>BANERY</span><i class="fa-solid fa-diamond"></i>
+                <span>GRAFIKA 3D</span><i class="fa-solid fa-diamond"></i>
+                <span>MINIATURKI MINECRAFT & CS2</span><i class="fa-solid fa-diamond"></i>
+                <span>AVATARY</span><i class="fa-solid fa-diamond"></i>
+                <span>BANERY</span><i class="fa-solid fa-diamond"></i>
+                <span>GRAFIKA 3D</span><i class="fa-solid fa-diamond"></i>
+            </div>
+        </section>
+
+        <section class="section portfolio-section" id="portfolio">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div>
+                        <div class="section-kicker">01 / portfolio</div>
+                        <h2>Prace, które <span class="gradient-text">mówią same za siebie.</span></h2>
+                    </div>
+                    <p>Kliknij projekt, aby zobaczyć go w pełnej jakości. Każdą realizację dopasowuję do konkretnego filmu, kanału i stylu twórcy.</p>
+                </div>
+
+                <div class="portfolio-filters reveal">
+                    <button class="filter-btn active" data-filter="all">Wszystkie <span>9</span></button>
+                    <button class="filter-btn" data-filter="minecraft">Minecraft <span>8</span></button>
+                    <button class="filter-btn" data-filter="cs2">CS2 <span>1</span></button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <article class="portfolio-item portfolio-large reveal" data-category="minecraft" tabindex="0"
+                        data-image="manhunt.png" data-title="Arab Manhunt 1vs4"
+                        data-desc="Dynamiczna miniaturka do filmu Minecraft Manhunt 1vs4 stworzona dla twórcy Arab_Mc. Ucieczka pod ziemią, pościg łowców i mocny kontrast prowadzą wzrok prosto do kluczowej akcji.">
+                        <img src="manhunt.png" alt="Arab Manhunt 1vs4" loading="lazy">
+                        <div class="portfolio-gradient"></div>
+                        <div class="portfolio-meta"><span class="tag">Miniaturka</span><span class="view-project">Podgląd <i class="fa-solid fa-arrow-up-right-from-square"></i></span></div>
+                        <div class="portfolio-title"><h3>Arab Manhunt 1vs4</h3><p>Dynamiczna kompozycja • Minecraft</p></div>
+                    </article>
+
+                    <article class="portfolio-item reveal" data-category="minecraft" tabindex="0"
+                        data-image="clutch.png" data-title="Ladder Clutch"
+                        data-desc="Napięta, pełna emocji miniaturka gamingowa przedstawiająca widowiskowy moment clutch. Precyzyjne oświetlenie i głębia ostrości skupiają uwagę na kluczowej akcji.">
+                        <img src="clutch.png" alt="Ladder Clutch" loading="lazy">
+                        <div class="portfolio-gradient"></div>
+                        <div class="portfolio-meta"><span class="tag">Miniaturka</span><span class="view-project">Podgląd <i class="fa-solid fa-arrow-up-right-from-square"></i></span></div>
+                        <div class="portfolio-title"><h3>Ladder Clutch</h3><p>Gaming • Action</p></div>
+                    </article>
+
+                    <article class="portfolio-item reveal" data-category="minecraft" tabindex="0"
+                        data-image="welna.png" data-title="Bedwars ale bez wełny"
+                        data-desc="Kreatywna i humorystyczna miniaturka do challengu w Minecraft Bedwars. Dynamiczna kompozycja i dopracowane detale 3D budują czytelny, mocny kadr.">
+                        <img src="welna.png" alt="Bedwars ale bez wełny" loading="lazy">
+                        <div class="portfolio-gradient"></div>
+                        <div class="portfolio-meta"><span class="tag">Miniaturka</span><span class="view-project">Podgląd <i class="fa-solid fa-arrow-up-right-from-square"></i></span></div>
+                        <div class="portfolio-title"><h3>Bedwars bez wełny</h3><p>Challenge • Minecraft</p></div>
+                    </article>
+
+                    <article class="portfolio-item reveal" data-category="minecraft" tabindex="0"
+                        data-image="firstday-po.png" data-title="First Day"
+                        data-desc="Kreatywna grafika koncepcyjna stworzona z dbałością o każdy detal wizualny.">
+                        <img src="firstday-po.png" alt="First Day" loading="lazy">
+                        <div class="portfolio-gradient"></div>
+                        <div class="portfolio-meta"><span class="tag">Miniaturka</span><span class="view-project">Podgląd <i class="fa-solid fa-arrow-up-right-from-square"></i></span></div>
+                        <div class="portfolio-title"><h3>First Day</h3><p>Miniaturka • Minecraft</p></div>
+                    </article>
+
+                    <article class="portfolio-item reveal" data-category="minecraft" tabindex="0"
+                        data-image="stragan-po.png" data-title="Stragan"
+                        data-desc="Klimatyczna grafika przedstawiająca motyw straganu w unikalnym stylu.">
+                        <img src="stragan-po.png" alt="Stragan" loading="lazy">
+                        <div class="portfolio-gradient"></div>
+                        <div class="portfolio-meta"><span class="tag">Miniaturka</span><span class="view-project">Podgląd <i class="fa-solid fa-arrow-up-right-from-square"></i></span></div>
+                        <div class="portfolio-title"><h3>Stragan</h3><p>Miniaturka • Minecraft</p></div>
+                    </article>
+
+                    <article class="portfolio-item reveal" data-category="minecraft" tabindex="0"
+                        data-image="manhunt2.png" data-title="Manhunt 2"
+                        data-desc="Dynamiczna miniaturka Minecraft z mocnym podziałem sceny i wyraźnym pierwszym planem.">
+                        <img src="manhunt2.png" alt="Manhunt 2" loading="lazy">
+                        <div class="portfolio-gradient"></div>
+                        <div class="portfolio-meta"><span class="tag">Miniaturka</span><span class="view-project">Podgląd <i class="fa-solid fa-arrow-up-right-from-square"></i></span></div>
+                        <div class="portfolio-title"><h3>Manhunt 2</h3><p>Miniaturka • Minecraft</p></div>
+                    </article>
+
+                    <article class="portfolio-item reveal" data-category="minecraft" tabindex="0"
+                        data-image="opening.png" data-title="Opening"
+                        data-desc="Kolorowa miniaturka Minecraft z mocnym bohaterem i czytelnym, dynamicznym kadrem.">
+                        <img src="opening.png" alt="Opening" loading="lazy">
+                        <div class="portfolio-gradient"></div>
+                        <div class="portfolio-meta"><span class="tag">Miniaturka</span><span class="view-project">Podgląd <i class="fa-solid fa-arrow-up-right-from-square"></i></span></div>
+                        <div class="portfolio-title"><h3>Opening</h3><p>Miniaturka • Minecraft</p></div>
+                    </article>
+
+                    <article class="portfolio-item reveal" data-category="minecraft" tabindex="0"
+                        data-image="wojna.png" data-title="Wojna"
+                        data-desc="Filmowa miniaturka Minecraft z dużą skalą sceny, ruchem i mocnym centralnym bohaterem.">
+                        <img src="wojna.png" alt="Wojna" loading="lazy">
+                        <div class="portfolio-gradient"></div>
+                        <div class="portfolio-meta"><span class="tag">Miniaturka</span><span class="view-project">Podgląd <i class="fa-solid fa-arrow-up-right-from-square"></i></span></div>
+                        <div class="portfolio-title"><h3>Wojna</h3><p>Miniaturka • Minecraft</p></div>
+                    </article>
+
+                    <article class="portfolio-item reveal" data-category="cs2" tabindex="0"
+                        data-image="cs1.png" data-title="500 zł na skiny"
+                        data-desc="Miniaturka CS2 z mocnym typograficznym hasłem i centralnie wyeksponowanym nożem.">
+                        <img src="cs1.png" alt="500 zł na skiny — CS2" loading="lazy">
+                        <div class="portfolio-gradient"></div>
+                        <div class="portfolio-meta"><span class="tag">Miniaturka</span><span class="view-project">Podgląd <i class="fa-solid fa-arrow-up-right-from-square"></i></span></div>
+                        <div class="portfolio-title"><h3>500 zł na skiny</h3><p>Miniaturka • CS2</p></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section services-section" id="uslugi">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <div>
+                        <div class="section-kicker">02 / usługi</div>
+                        <h2>Grafika pod <span class="gradient-text">Twój content.</span></h2>
+                    </div>
+                    <p>Nie robię „kolejnej grafiki”. Najpierw patrzę na pomysł i cel materiału, potem buduję wizual, który ma go sprzedać.</p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card featured reveal">
+                        <div class="service-number">01</div>
+                        <div class="service-icon"><i class="fa-solid fa-image"></i></div>
+                        <h3>Miniaturki Minecraft</h3>
+                        <p>Dynamiczne, czytelne miniaturki YouTube z mocnym pierwszym planem, światłem i kompozycją nastawioną na uwagę widza.</p>
+                        <div class="service-bottom"><span>od 25 zł</span><a href="#kontakt">Zamów <i class="fa-solid fa-arrow-right"></i></a></div>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-number">02</div>
+                        <div class="service-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+                        <h3>Avatary / profilowe</h3>
+                        <p>Unikalny avatar Minecraft dopasowany do Twojego nicku, charakteru kanału i identyfikacji wizualnej.</p>
+                        <div class="service-bottom"><span>od 20 zł</span><a href="#kontakt">Zamów <i class="fa-solid fa-arrow-right"></i></a></div>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-number">03</div>
+                        <div class="service-icon"><i class="fa-solid fa-panorama"></i></div>
+                        <h3>Banery YouTube / Discord</h3>
+                        <p>Spójna oprawa kanału i serwera, która dobrze wygląda zarówno na desktopie, jak i na urządzeniach mobilnych.</p>
+                        <div class="service-bottom"><span>od 25 zł</span><a href="#kontakt">Zamów <i class="fa-solid fa-arrow-right"></i></a></div>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-number">04</div>
+                        <div class="service-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+                        <h3>Inne grafiki Minecraft</h3>
+                        <p>Masz nietypowy pomysł? Scena 3D, grafika promocyjna, concept albo coś, czego nie ma w cenniku — napisz.</p>
+                        <div class="service-bottom"><span>wycena indywidualna</span><a href="#kontakt">Zapytaj <i class="fa-solid fa-arrow-right"></i></a></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section pricing-section" id="cennik">
+            <div class="container">
+                <div class="pricing-layout">
+                    <div class="pricing-intro reveal">
+                        <div class="section-kicker">03 / cennik</div>
+                        <h2>Prosto. <span class="gradient-text">Bez ukrytych kosztów.</span></h2>
+                        <p>Cena zależy od poziomu skomplikowania, ale poniżej masz bazowy cennik. Jeśli masz konkretny pomysł, wyślij mi opis — podam dokładną cenę przed startem.</p>
+                        <div class="price-note"><i class="fa-solid fa-shield-halved"></i><span><strong>Bez niespodzianek.</strong><br>Najpierw ustalamy zakres i cenę, dopiero potem zaczynam pracę.</span></div>
+                    </div>
+
+                    <div class="price-table reveal">
+                        <div class="price-row">
+                            <div><span class="price-label">01</span><div><h3>Miniaturka YouTube</h3><p>Wysoki CTR i przyciągający styl</p></div></div>
+                            <strong>od 25 zł</strong><a href="#kontakt" aria-label="Zamów miniaturkę"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="price-row">
+                            <div><span class="price-label">02</span><div><h3>Profilowe / Avatar</h3><p>Dopasowane do Twojego brandingu</p></div></div>
+                            <strong>od 20 zł</strong><a href="#kontakt" aria-label="Zamów avatar"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="price-row">
+                            <div><span class="price-label">03</span><div><h3>Baner YouTube / Discord</h3><p>Profesjonalna oprawa kanału</p></div></div>
+                            <strong>od 25 zł</strong><a href="#kontakt" aria-label="Zamów baner"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="price-row price-highlight">
+                            <div><span class="price-label">04</span><div><span class="popular">NAJLEPSZY START</span><h3>Profilowe + Baner</h3><p>Kompletny zestaw promocyjny</p></div></div>
+                            <strong>45 zł</strong><a href="#kontakt" aria-label="Zamów pakiet"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pricing-perks reveal">
+                    <div><i class="fa-solid fa-bolt"></i><span><b>Szybka realizacja</b><small>Najdłuższe prace do 36h roboczych</small></span></div>
+                    <div><i class="fa-solid fa-rotate"></i><span><b>Nielimitowane poprawki</b><small>Do momentu, aż efekt będzie OK</small></span></div>
+                    <div><i class="fa-solid fa-gem"></i><span><b>PNG w najwyższej jakości</b><small>Bez kompresji Discorda</small></span></div>
+                    <div><i class="fa-solid fa-wallet"></i><span><b>BLIK / przelew</b><small>Proste formy płatności</small></span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about-section" id="o-mnie">
+            <div class="container about-grid">
+                <div class="about-visual reveal">
+                    <div class="about-avatar">J<span>S</span></div>
+                    <div class="about-card about-card-top"><i class="fa-solid fa-pen-nib"></i><span>Design<br><b>with intent.</b></span></div>
+                    <div class="about-card about-card-bottom"><i class="fa-solid fa-cube"></i><span>Blender<br><b>+ Cinema 4D</b></span></div>
+                </div>
+                <div class="about-copy reveal">
+                    <div class="section-kicker">04 / o mnie</div>
+                    <h2>Hej, jestem <span class="gradient-text">Junior.</span></h2>
+                    <p>Cześć! Jestem twórcą JuniorStudio — jednoosobowego studia graficznego skupionego przede wszystkim na Minecrafcie.</p>
+                    <p>Tworzę miniaturki, avatary, banery i inne grafiki dla twórców internetowych. Lubię mocne światło, czytelną kompozycję i detale 3D, ale najważniejsze jest dla mnie to, żeby projekt miał konkretny cel.</p>
+                    <div class="tool-list">
+                        <span><i class="fa-solid fa-cube"></i> Blender</span>
+                        <span><i class="fa-solid fa-wand-magic-sparkles"></i> Photopea</span>
+                        <span><i class="fa-solid fa-layer-group"></i> Cycles</span>
+                        <span><i class="fa-solid fa-cube"></i> Cinema 4D</span>
+                        <span><i class="fa-solid fa-person-running"></i> Najlepsze rigi</span>
+                    </div>
+                    <a href="#kontakt" class="text-link">Porozmawiajmy o projekcie <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section process-section">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <div>
+                        <div class="section-kicker">05 / proces</div>
+                        <h2>Od pomysłu do <span class="gradient-text">gotowej grafiki.</span></h2>
+                    </div>
+                </div>
+                <div class="process-grid">
+                    <div class="process-step reveal"><span>01</span><i class="fa-regular fa-comments"></i><h3>Kontakt</h3><p>Wysyłasz mi pomysł, materiały i informacje o projekcie.</p></div>
+                    <div class="process-line"></div>
+                    <div class="process-step reveal"><span>02</span><i class="fa-solid fa-pen-ruler"></i><h3>Projekt</h3><p>Buduję kompozycję, renderuję scenę i dopracowuję każdy detal.</p></div>
+                    <div class="process-line"></div>
+                    <div class="process-step reveal"><span>03</span><i class="fa-solid fa-check-double"></i><h3>Finalizacja</h3><p>Wprowadzamy poprawki i dostajesz gotowy plik PNG w wysokiej jakości.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section collab-section" id="wspolpraca">
+            <div class="container">
+                <div class="collab-card reveal">
+                    <div class="collab-badge"><i class="fa-brands fa-youtube"></i> WYBRANA WSPÓŁPRACA</div>
+                    <div class="collab-main">
+                        <div class="collab-avatar" onclick="window.open('https://www.youtube.com/@ArabbbYT', '_blank')" role="button" tabindex="0" aria-label="Odwiedź kanał Arab">
+                            <img src="Arab_mc.png" alt="Avatar Minecraft Arab" onerror="this.style.display='none'; this.nextElementSibling.classList.add('fallback-visible');">
+                            <span class="collab-avatar-fallback">ARAB</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                        <div class="collab-copy">
+                            <h2>Arab</h2>
+                            <div class="collab-stats"><span>~4,47 tys. <small>subskrybentów</small></span><span>226,6 tys.+ <small>wyświetleń</small></span></div>
+                            <p>Twórca contentu gamingowego, dla którego realizowałem projekty graficzne.</p>
+                            <a href="https://www.youtube.com/@ArabbbYT" target="_blank" rel="noopener" class="btn btn-ghost">Odwiedź kanał <i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section faq-section" id="faq">
+            <div class="container faq-layout">
+                <div class="faq-intro reveal">
+                    <div class="section-kicker">06 / faq</div>
+                    <h2>Masz pytanie?<br><span class="gradient-text">Tu jest odpowiedź.</span></h2>
+                    <p>Nie znalazłeś informacji, której szukasz? Napisz na Discordzie — odpowiem.</p>
+                    <a href="#kontakt" class="text-link">Mam inne pytanie <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="faq-list reveal">
+                    <details open><summary>Ile trwa realizacja? <i class="fa-solid fa-plus"></i></summary><p>Czas zależy od wielkości i złożoności projektu. Najdłuższe pojedyncze prace mogą potrwać do 36 godzin roboczych, zależnie od złożoności projektu i kolejki.</p></details>
+                    <details><summary>Jak wygląda płatność i zaliczka? <i class="fa-solid fa-plus"></i></summary><p>Płatności przyjmuję Blikiem lub przelewem tradycyjnym. Jeśli nie masz jeszcze zbudowanej dużej społeczności, wymagana jest zaliczka przed rozpoczęciem pracy. W przypadku twórców z dużymi kanałami sprawa wygląda inaczej.</p></details>
+                    <details><summary>W jakim formacie dostanę projekt? <i class="fa-solid fa-plus"></i></summary><p>Projekt wysyłam w najwyższej jakości jako plik .png za pośrednictwem platformy MediaFire, aby uniknąć kompresji Discorda.</p></details>
+                    <details><summary>Czy robisz grafiki spoza cennika? <i class="fa-solid fa-plus"></i></summary><p>Tak. Jeśli potrzebujesz innej grafiki Minecraft, opisz mi pomysł i zakres pracy. Przygotuję indywidualną wycenę.</p></details>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cta" id="kontakt">
+            <div class="contact-pattern"></div>
+            <div class="container contact-inner reveal">
+                <div class="section-kicker">07 / kontakt</div>
+                <h2>Masz pomysł?<br><span class="gradient-text">Zróbmy z niego grafikę.</span></h2>
+                <p>Najlepiej napisz na Discordzie. Podeślij temat, termin i przykłady tego, co Ci się podoba.</p>
+                <div class="contact-actions">
+                    <a href="https://discord.gg/J3hfhnPzZ" target="_blank" rel="noopener" class="btn btn-primary btn-large"><i class="fa-brands fa-discord"></i> Discord</a>
+                    <a href="https://www.behance.net/juniorstudio_pl" target="_blank" rel="noopener" class="btn btn-ghost btn-large"><i class="fa-brands fa-behance"></i> Behance</a>
+                    <a href="https://payhip.com/JuniorStudioo" target="_blank" rel="noopener" class="btn btn-ghost btn-large"><i class="fa-solid fa-bag-shopping"></i> Sklep</a>
+                </div>
+                <div class="contact-handle"><span>Discord</span><b>kontakt.juniorstudio</b><button id="copyDiscord" aria-label="Kopiuj nazwę Discord"><i class="fa-regular fa-copy"></i></button></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <a href="#home" class="logo"><span class="logo-mark">J</span><span>Junior<span class="logo-accent">Studio</span></span></a>
+            <p>© 2026 JuniorStudio. Grafika Minecraft & design.</p>
+            <div class="footer-links">
+                <a href="https://www.behance.net/juniorstudio_pl" target="_blank" rel="noopener"><i class="fa-brands fa-behance"></i></a>
+                <a href="https://www.youtube.com/@JuniorStudio_yt" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://discord.gg/aqat2wQGV" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="imageModal" aria-hidden="true">
+        <button class="modal-close" id="modalClose" aria-label="Zamknij podgląd"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-image-wrap"><img id="modalImg" src="" alt="Podgląd projektu"></div>
+            <div class="modal-info">
+                <span class="tag">JUNIORSTUDIO / PREVIEW</span>
+                <h3 id="modalTitle">Tytuł projektu</h3>
+                <p id="modalDesc">Opis projektu.</p>
+                <div class="modal-foot"><span><i class="fa-solid fa-gem"></i> Ultra HD</span><button id="modalCloseText">Zamknij <i class="fa-solid fa-arrow-right"></i></button></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"><i class="fa-solid fa-check"></i><span>Skopiowano!</span></div>
+    <script src="script.js"></script>
+</body>
+</html>
