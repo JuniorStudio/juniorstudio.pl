@@ -60,50 +60,35 @@
 
             const filter = button.dataset.filter;
             $$('.portfolio-item').forEach(item => {
-                const categories = (item.dataset.category || '').split(/\s+/).filter(Boolean);
-                const show = filter === 'all' || categories.includes(filter);
+                const show = filter === 'all' || item.dataset.category === filter;
                 item.classList.toggle('hidden', !show);
             });
         });
     });
 
-    /* Portfolio modal with previous/next navigation */
+    /* Portfolio modal */
     const modal = $('#imageModal');
     const modalImg = $('#modalImg');
     const modalTitle = $('#modalTitle');
     const modalDesc = $('#modalDesc');
     const modalClose = $('#modalClose');
     const modalCloseText = $('#modalCloseText');
-    const modalPrev = $('#modalPrev');
-    const modalNext = $('#modalNext');
-    let currentModalItem = null;
 
-    const visiblePortfolioItems = () => $$('.portfolio-item').filter(item => !item.classList.contains('hidden'));
-    const showModalItem = (item) => {
-        if (!item) return;
-        currentModalItem = item;
+    const openModal = (item) => {
         modalImg.src = item.dataset.image;
-        modalImg.alt = item.querySelector('img')?.alt || item.dataset.title || 'Podgląd projektu';
-        modalTitle.textContent = item.dataset.title || 'Projekt JuniorStudio';
-        modalDesc.textContent = item.dataset.desc || '';
+        modalImg.alt = item.dataset.title;
+        modalTitle.textContent = item.dataset.title;
+        modalDesc.textContent = item.dataset.desc;
         modal.classList.add('open');
         modal.setAttribute('aria-hidden', 'false');
         document.body.classList.add('modal-open');
     };
-    const openModal = (item) => showModalItem(item);
+
     const closeModal = () => {
         modal.classList.remove('open');
         modal.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('modal-open');
-        currentModalItem = null;
         setTimeout(() => { modalImg.src = ''; }, 250);
-    };
-    const moveModal = (direction) => {
-        const items = visiblePortfolioItems();
-        if (!items.length || !currentModalItem) return;
-        const index = items.indexOf(currentModalItem);
-        const nextIndex = (index + direction + items.length) % items.length;
-        showModalItem(items[nextIndex]);
     };
 
     $$('.portfolio-item').forEach(item => {
@@ -115,28 +100,15 @@
             }
         });
     });
+
     modalClose?.addEventListener('click', closeModal);
     modalCloseText?.addEventListener('click', closeModal);
-    modalPrev?.addEventListener('click', () => moveModal(-1));
-    modalNext?.addEventListener('click', () => moveModal(1));
     modal?.addEventListener('click', event => {
         if (event.target === modal) closeModal();
     });
-    document.addEventListener('keydown', event => {
-        if (!modal.classList.contains('open')) return;
-        if (event.key === 'Escape') closeModal();
-        if (event.key === 'ArrowLeft') moveModal(-1);
-        if (event.key === 'ArrowRight') moveModal(1);
-    });
 
-    /* Interactive before/after sliders */
-    $$('[data-comparison]').forEach(card => {
-        const stage = $('.comparison-stage', card);
-        const range = $('.comparison-range', card);
-        if (!stage || !range) return;
-        const update = () => stage.style.setProperty('--split', `${range.value}%`);
-        range.addEventListener('input', update);
-        update();
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && modal.classList.contains('open')) closeModal();
     });
 
     /* Copy Discord handle */
