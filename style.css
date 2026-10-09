@@ -291,3 +291,72 @@ footer{border-top:1px solid var(--line);background:#060609;padding:28px 0}.foote
 .product-card-action .btn{white-space:nowrap}
 .product-card-action small{max-width:210px;color:var(--muted);font-size:.63rem;line-height:1.6}
 @media(max-width:800px){.product-card{grid-template-columns:1fr;gap:24px}.product-card-action{border-left:0;border-top:1px solid var(--line);padding:22px 0 0;min-width:0}.product-features{grid-template-columns:1fr}}
+
+/* POPRAWKA UKLADU SKLEPU — odstep od cennika i przycisk bez nakladania */
+.pricing-section .products-panel{
+  display:block !important;
+  position:relative !important;
+  clear:both;
+  width:100%;
+  box-sizing:border-box;
+  margin-top:104px !important;
+  padding-top:64px !important;
+  border-top:1px solid var(--line);
+}
+.pricing-section .products-heading{
+  display:block;
+  margin:0 0 28px !important;
+  max-width:760px;
+}
+.pricing-section .products-heading .section-kicker{margin-bottom:12px}
+.pricing-section .products-heading h2{margin:10px 0 14px;line-height:1.15}
+.pricing-section .products-heading>p{line-height:1.8;max-width:680px}
+.pricing-section .product-card{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) minmax(230px,270px) !important;
+  align-items:center;
+  gap:36px !important;
+  width:100%;
+  box-sizing:border-box;
+  padding:clamp(24px,4vw,40px) !important;
+  border:1px solid rgba(192,132,252,.24);
+  border-radius:22px;
+  background:linear-gradient(125deg,rgba(192,132,252,.09),rgba(17,17,23,.96) 55%,rgba(74,222,128,.045));
+}
+.pricing-section .product-card-copy{min-width:0}
+.pricing-section .product-card-copy>p{line-height:1.85;margin:0}
+.pricing-section .product-features{margin-top:22px;gap:12px 22px}
+.pricing-section .product-card-action{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  justify-content:center;
+  gap:14px !important;
+  min-width:0 !important;
+  width:100%;
+  box-sizing:border-box;
+  padding:8px 0 8px 28px !important;
+  border-left:1px solid var(--line);
+}
+.pricing-section .product-price{display:block;line-height:1.5}
+.pricing-section .product-card-action .btn{
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  width:100%;
+  min-height:52px;
+  box-sizing:border-box;
+  padding:14px 18px;
+  white-space:normal !important;
+  text-align:center;
+  line-height:1.35;
+}
+.pricing-section .product-card-action small{display:block;max-width:100%;line-height:1.7}
+@media(max-width:800px){
+  .pricing-section .products-panel{margin-top:76px !important;padding-top:44px !important}
+  .pricing-section .product-card{grid-template-columns:minmax(0,1fr) !important;gap:26px !important}
+  .pricing-section .product-card-action{border-left:0;border-top:1px solid var(--line);padding:24px 0 0 !important}
+  .pricing-section .product-card-action .btn{width:100%}
+  .pricing-section .product-features{grid-template-columns:1fr}
+}
