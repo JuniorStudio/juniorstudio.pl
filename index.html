@@ -13,9 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="enhance.css">
+    <link rel="stylesheet" href="agency.css">
 </head>
 <body>
 
+    <div class="loader" id="loader" aria-hidden="true"><div class="ld-panel top"></div><div class="ld-panel bot"></div><div class="ld-core"><div class="ld-cube"><b class="f1"></b><b class="f2"></b><b class="f3"></b><b class="f4"></b><b class="f5"></b><b class="f6"></b></div><div class="ld-count"><span id="ldNum">0</span>%</div><div class="ld-logo"><span class="ld-mark">J<i>S</i></span><span class="ld-word"></span><span class="ld-line"></span></div><div class="ld-skip">kliknij, aby pominąć</div></div></div>
+    <div class="progress" id="progress"></div>
     <div class="noise"></div>
     <div class="cursor-glow"></div>
 
@@ -38,7 +42,7 @@
             <a href="https://www.behance.net/juniorstudio_pl" target="_blank" rel="noopener" class="header-social" aria-label="Behance">
                 <i class="fa-brands fa-behance"></i>
             </a>
-            <a href="#kontakt" class="header-cta">Zamów grafikę <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#konfigurator" class="header-cta">Zamów grafikę <i class="fa-solid fa-arrow-right"></i></a>
             <button class="menu-toggle" id="menuToggle" aria-label="Otwórz menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
@@ -82,20 +86,12 @@
                     </div>
                 </div>
 
-                <div class="hero-visual reveal reveal-delay">
+                <div id="heroStage" class="hero-visual reveal reveal-delay">
                     <div class="visual-glow"></div>
-                    <div class="visual-card visual-back">
-                        <img src="welna.png" alt="Projekt Minecraft Bedwars" loading="lazy">
-                    </div>
-                    <div class="visual-card visual-main">
-                        <img src="manhunt.png" alt="Miniaturka Minecraft Manhunt" fetchpriority="high">
-                        <div class="visual-overlay">
-                            <span><i class="fa-solid fa-wand-magic-sparkles"></i> JuniorStudio</span>
-                            <b>Thumbnail design</b>
-                        </div>
-                    </div>
+                    <div class="ring3d" id="ring3d"><div class="cube"><b class="f1"></b><b class="f2"></b><b class="f3"></b><b class="f4"></b><b class="f5"></b><b class="f6"></b></div><button class="ring-card" style="--i:0" data-image="wojna.png" aria-label="Podgląd: Wojna"><img src="wojna.png" alt="Wojna" draggable="false"></button><button class="ring-card" style="--i:1" data-image="opening.png" aria-label="Podgląd: Opening"><img src="opening.png" alt="Opening" draggable="false"></button><button class="ring-card" style="--i:2" data-image="manhunt2.png" aria-label="Podgląd: Manhunt 2"><img src="manhunt2.png" alt="Manhunt 2" draggable="false"></button><button class="ring-card" style="--i:3" data-image="statek.png" aria-label="Podgląd: Statek Minecraft"><img src="statek.png" alt="Statek Minecraft" draggable="false"></button><button class="ring-card" style="--i:4" data-image="cs1.png" aria-label="Podgląd: 500 zł na skiny"><img src="cs1.png" alt="500 zł na skiny" draggable="false"></button><button class="ring-card" style="--i:5" data-image="awatar1.png" aria-label="Podgląd: Avatar Minecraft"><img src="awatar1.png" alt="Avatar Minecraft" draggable="false"></button><button class="ring-card" style="--i:6" data-image="profilowe1.png" aria-label="Podgląd: Profilowe"><img src="profilowe1.png" alt="Profilowe" draggable="false"></button></div>
                     <div class="floating-chip chip-top"><i class="fa-solid fa-star"></i><span>Pixel-perfect</span></div>
                     <div class="floating-chip chip-bottom"><i class="fa-solid fa-cube"></i><span>Minecraft 3D</span></div>
+                <div class="drag-hint"><i class="fa-solid fa-arrows-left-right"></i> przeciągnij, aby obrócić</div>
                 </div>
             </div>
 
@@ -346,6 +342,48 @@
             </div>
         </section>
 
+        <section class="section calc-section" id="konfigurator">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div><div class="section-kicker">konfigurator zamówienia</div><h2>Złóż zamówienie <span class="gradient-text">w 30 sekund.</span></h2></div>
+                    <p>Zaznacz, czego potrzebujesz. Dostaniesz gotową wiadomość do wklejenia na Discordzie — cenę i zakres potwierdzimy przed startem prac.</p>
+                </div>
+                <div class="calc reveal" id="calc">
+                    <div class="calc-main">
+                        <div class="calc-step"><h3>1. Wybierz usługi i ilość</h3>
+                            <div class="calc-slots">
+                                <div class="slot" data-k="thumb" data-price="25" data-name="Miniaturka YouTube"><button type="button" class="slot-body"><i class="fa-solid fa-image"></i><b>Miniaturka</b><small>od 25 zł</small></button><div class="qty"><button type="button" data-d="-1" aria-label="Mniej: Miniaturka">−</button><output>0</output><button type="button" data-d="1" aria-label="Więcej: Miniaturka">+</button></div></div>
+                                <div class="slot" data-k="avatar" data-price="20" data-name="Profilowe / Avatar"><button type="button" class="slot-body"><i class="fa-solid fa-user-astronaut"></i><b>Profilowe</b><small>od 20 zł</small></button><div class="qty"><button type="button" data-d="-1" aria-label="Mniej: Profilowe">−</button><output>0</output><button type="button" data-d="1" aria-label="Więcej: Profilowe">+</button></div></div>
+                                <div class="slot" data-k="banner" data-price="25" data-name="Baner YouTube / Discord"><button type="button" class="slot-body"><i class="fa-solid fa-panorama"></i><b>Baner</b><small>od 25 zł</small></button><div class="qty"><button type="button" data-d="-1" aria-label="Mniej: Baner">−</button><output>0</output><button type="button" data-d="1" aria-label="Więcej: Baner">+</button></div></div>
+                                <div class="slot" data-k="pack" data-price="45" data-name="Pakiet Profilowe + Baner"><button type="button" class="slot-body"><i class="fa-solid fa-gem"></i><b>Profilowe + Baner</b><small>45 zł</small></button><div class="qty"><button type="button" data-d="-1" aria-label="Mniej: Profilowe + Baner">−</button><output>0</output><button type="button" data-d="1" aria-label="Więcej: Profilowe + Baner">+</button></div></div>
+                            </div>
+                            <p class="calc-hint" id="calcHint"></p>
+                        </div>
+                        <div class="calc-step"><h3>2. Gra / motyw</h3><div class="chips"><label class="chip"><input type="radio" name="game" value="Minecraft" checked><span>Minecraft</span></label><label class="chip"><input type="radio" name="game" value="CS2"><span>CS2</span></label><label class="chip"><input type="radio" name="game" value="Inne"><span>Inne</span></label></div></div>
+                        <div class="calc-step"><h3>3. Styl (wybierz dowolnie)</h3><div class="chips"><label class="chip"><input type="checkbox" name="style" value="Dynamiczny"><span>Dynamiczny</span></label><label class="chip"><input type="checkbox" name="style" value="Mroczny"><span>Mroczny</span></label><label class="chip"><input type="checkbox" name="style" value="Kolorowy"><span>Kolorowy</span></label><label class="chip"><input type="checkbox" name="style" value="Humorystyczny"><span>Humorystyczny</span></label><label class="chip"><input type="checkbox" name="style" value="Minimalistyczny"><span>Minimalistyczny</span></label></div></div>
+                        <div class="calc-step calc-fields">
+                            <h3>4. Szczegóły</h3>
+                            <label>Twój kanał lub nick<input id="fNick" type="text" placeholder="np. @TwojKanal"></label>
+                            <label>Link do referencji (opcjonalnie)<input id="fRef" type="text" placeholder="Wklej link lub nazwę filmu"></label>
+                            <div class="calc-row"><label>Termin<input id="fDate" type="date"></label><label class="chk"><input id="fRelax" type="checkbox"> Bez pośpiechu</label></div>
+                            <label>Opis pomysłu<textarea id="fDesc" rows="3" placeholder="Temat filmu, napisy na miniaturze, kolory, postacie…"></textarea></label>
+                        </div>
+                    </div>
+                    <div class="calc-panel">
+                        <div class="calc-top"><span>Twoje zamówienie</span><button type="button" class="calc-reset" id="calcReset">Wyczyść</button></div>
+                        <ul class="calc-lines" id="calcLines"></ul>
+                        <div class="calc-total"><span>Szacunek</span><strong id="calcTotal">—</strong></div>
+                        <div class="calc-prog" title="Kompletność briefu"><i id="calcProg"></i></div>
+                        <small class="calc-prog-label" id="calcProgLabel">Brief: 0%</small>
+                        <textarea id="calcOut" rows="8" readonly placeholder="Tu pojawi się Twoja wiadomość…"></textarea>
+                        <button class="btn btn-primary" id="calcCopy" type="button"><i class="fa-brands fa-discord"></i> Kopiuj i otwórz Discord</button>
+                        <button class="btn btn-ghost" id="calcDl" type="button"><i class="fa-solid fa-download"></i> Pobierz brief (.txt)</button>
+                        <small class="calc-note">Cena jest orientacyjna — zakres i końcową kwotę potwierdzamy przed startem. Zaliczka zależy od wielkości kanału.</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section about-section" id="o-mnie">
             <div class="container about-grid">
                 <div class="about-visual reveal">
@@ -400,7 +438,7 @@
                         </div>
                         <div class="collab-copy">
                             <h2>Arab</h2>
-                            <div class="collab-stats"><span>~4,49 tys. <small>subskrybentów</small></span><span>229,1 tys.+ <small>wyświetleń</small></span></div>
+                            <div class="collab-stats"><span>~3,77 tys. <small>subskrybentów</small></span><span>103,3 tys.+ <small>wyświetleń</small></span></div>
                             <p>Twórca contentu gamingowego, dla którego realizowałem projekty graficzne.</p>
                             <a href="https://www.youtube.com/@ArabbbYT" target="_blank" rel="noopener" class="btn btn-ghost">Odwiedź kanał <i class="fa-brands fa-youtube"></i></a>
                         </div>
@@ -469,5 +507,8 @@
 
     <div class="toast" id="toast"><i class="fa-solid fa-check"></i><span>Skopiowano!</span></div>
     <script src="script.js"></script>
+    <script src="extras.js"></script>
+    <script src="agency.js"></script>
+    <script src="konfigurator.js"></script>
 </body>
 </html>
