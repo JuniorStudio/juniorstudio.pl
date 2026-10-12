@@ -1,0 +1,34 @@
+/* JuniorStudio — suwak przed / po (czysta scena C4D -> gotowa grafika) */
+.ba-section{background:var(--bg-soft,#0b0b10)}
+.ba{max-width:1100px;margin:0 auto}
+.ba-frame{--p:50%;position:relative;width:100%;aspect-ratio:16/9;border-radius:22px;overflow:hidden;background:#0d0d13;border:1px solid rgba(168,85,247,.3);box-shadow:0 40px 120px rgba(0,0,0,.55),0 0 80px rgba(124,58,237,.12);cursor:ew-resize;touch-action:pan-y;user-select:none;-webkit-user-select:none;outline:0}
+.ba-frame:focus-visible{outline:3px solid var(--cyan,#5cf0e0);outline-offset:4px}
+.ba-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none}
+.ba-before{position:absolute;inset:0;background:var(--ba-bg,#15151d);clip-path:inset(0 calc(100% - var(--p)) 0 0);will-change:clip-path}
+.ba-before.demo img{filter:grayscale(1) contrast(.72) brightness(.82) blur(1.5px)}
+.ba-tag{position:absolute;top:14px;z-index:2;padding:7px 12px;border-radius:99px;font-size:.68rem;font-weight:700;letter-spacing:.02em;color:#fff;background:rgba(10,10,16,.72);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.14);pointer-events:none;transition:opacity .25s}
+.ba-tag.l{left:14px}.ba-tag.r{right:14px;background:rgba(124,58,237,.8)}
+.ba-demo{position:absolute;left:50%;bottom:14px;z-index:2;transform:translateX(-50%);max-width:calc(100% - 28px);padding:7px 12px;border-radius:10px;font-size:.66rem;text-align:center;color:#fde68a;background:rgba(10,10,16,.85);border:1px solid rgba(252,211,77,.35);pointer-events:none}
+.ba-demo[hidden]{display:none}
+.ba-handle{position:absolute;top:0;bottom:0;left:var(--p);z-index:3;width:0;pointer-events:none}
+.ba-handle:before{content:"";position:absolute;top:0;bottom:0;left:-1.5px;width:3px;background:#fff;box-shadow:0 0 18px rgba(168,85,247,.9),0 0 3px rgba(0,0,0,.6)}
+.ba-knob{position:absolute;top:50%;left:0;width:54px;height:54px;margin:-27px 0 0 -27px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,#c084fc,#7c3aed);border:3px solid #fff;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:transform .2s}
+.ba-knob:before,.ba-knob:after{content:"";position:absolute;top:50%;width:9px;height:9px;margin-top:-4.5px;border:solid #fff;border-width:0 0 3px 3px}
+.ba-knob:before{left:12px;transform:rotate(45deg)}.ba-knob:after{right:12px;transform:rotate(-135deg)}
+.ba-frame.drag .ba-knob,.ba-frame:hover .ba-knob{transform:scale(1.12)}
+.ba:not(.touched) .ba-knob{animation:baPulse 1.8s ease-out infinite}
+@keyframes baPulse{0%{box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 0 rgba(192,132,252,.7)}100%{box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 22px rgba(192,132,252,0)}}
+.ba-frame.loading img{opacity:0}
+.ba-frame img{transition:opacity .35s}
+.ba-err{position:absolute;inset:0;z-index:4;display:grid;place-items:center;padding:20px;text-align:center;font-size:.8rem;color:#fca5a5;background:#0d0d13}
+.ba-err[hidden]{display:none}
+.ba-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:16px}
+.ba-tabs{display:flex;flex-wrap:wrap;gap:7px}
+.ba-tabs button{padding:9px 14px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.03);color:#b9b9c6;font-size:.74rem;cursor:pointer;transition:.2s}
+.ba-tabs button:hover{color:#fff;border-color:rgba(168,85,247,.45)}
+.ba-tabs button[aria-selected=true]{background:var(--purple,#9b4dff);border-color:var(--purple,#9b4dff);color:#fff}
+.ba-tabs button:focus-visible{outline:2px solid var(--cyan,#5cf0e0);outline-offset:2px}
+.ba-actions{display:flex;gap:8px;flex-wrap:wrap}
+.ba-actions .btn{padding:11px 16px;font-size:.78rem}
+@media(max-width:560px){.ba-frame{border-radius:16px}.ba-knob{width:46px;height:46px;margin:-23px 0 0 -23px}.ba-knob:before{left:9px}.ba-knob:after{right:9px}.ba-tag{font-size:.6rem;padding:5px 9px;top:10px}.ba-tag.l{left:10px}.ba-tag.r{right:10px}}
+@media(prefers-reduced-motion:reduce){.ba:not(.touched) .ba-knob{animation:none}.ba-frame img{transition:none}}
