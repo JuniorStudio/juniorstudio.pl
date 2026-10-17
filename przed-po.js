@@ -3,6 +3,7 @@
    Dla każdej pracy wrzuć obok index.html plik z czystą sceną (pole "before"). Brak pliku = oznaczona wersja demo. */
 (()=>{const $=(s,p=document)=>p.querySelector(s),$$=(s,p=document)=>[...p.querySelectorAll(s)];
 const PAIRS=[
+ {title:'Manhunt 3',before:'manhunt3-przed.png',after:'Manhunt3-po.png'},
  {title:'Manhunt 2',before:'manhunt2-przed.png',after:'manhunt2.png'},
  {title:'Wojna',before:'wojna-przed.png',after:'wojna.png'},
  {title:'Statek',before:'statek-przed.png',after:'statek.png'},
